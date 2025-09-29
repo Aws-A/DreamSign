@@ -1,0 +1,214 @@
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+.container {
+    display: flex;
+    min-height: 100vh; /* instead of height */
+    background-size: cover; /* make it stretch */
+  }
+  
+.left {
+  flex: 1.4;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 2rem;
+}
+.right {
+    flex: 1.6;
+    position: relative;
+    background-size: cover;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .right::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.03); /* black with 7% opacity */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  }
+
+  header {
+    height: 80px;          /* adjust height as needed */
+    display: flex;
+    align-items: center;   /* vertically center content */
+    padding: 0 20px;       /* horizontal spacing */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;           /* make sure it’s above container */
+  }
+
+  #logo {
+    width: 20%;
+    margin-left: 1%;
+    margin-top: 2%;
+  }
+
+  .left h1{
+    margin-top: 20%;
+    margin-left: 7%;
+
+  }
+
+  .right h1{
+    margin-top: 21%;
+    margin-left: 21%;
+
+  }
+
+.heading {
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.categoryGridArea {
+  background-position: center;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+}
+
+
+#categoryGrid-illus {
+  margin: 50px 5% 25px 5%;
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "illus1 illus1 illus2"
+  "illus3 illus3 illus2"
+  "illus4 illus4 illus5";;
+}
+
+#illus1 {
+  grid-area: illus1;
+  background-image: url("../images/walking-in-park.png");
+
+}
+
+#illus2 {
+  grid-area: illus2;
+  background-image: url("../images/fall.png");
+
+}
+
+#illus3 {
+  grid-area: illus3;
+  background-image: url("../images/village.png");
+}
+
+#illus4 {
+  grid-area: illus4;
+  background-image: url("../images/port.png");
+}
+
+#illus5 {
+  grid-area: illus5;
+  background-image: url("../images/downtown.png");
+}
+
+#categoryGrid-icons {
+  width: 500px;
+  margin: 50px 0% 25px 25%;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 0.25 fr 0.25 fr 0.25 fr;
+  grid-template-areas:
+    "icon1 icon2 icon3"
+    "icon4 icon5 .";
+  gap: 20px;
+}
+
+.categoryGridArea-Icon {
+  background-position: bottom;
+  background-size: contain; /* keep proportions */
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: grid;
+  align-content: center; /* center content vertically */
+}
+
+#icon1 {
+  grid-area: icon1;
+  background-image: url("../images/home.png");
+
+}
+
+#icon2 {
+  grid-area: icon2;
+  background-image: url("../images/city.png");
+
+}
+
+#icon3 {
+  grid-area: icon3;
+  background-image: url("../images/garden.png");
+}
+
+#icon4 {
+  grid-area: icon4;
+  background-image: url("../images/forest.png");
+}
+
+#icon5 {
+  grid-area: icon5;
+  background-image: url("../images/mount.png");
+}
+
+#categoryGrid-iconsFilled {
+  width: 500px;
+  margin: 50px 0% 25px 25%;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 0.25 fr 0.25 fr 0.25 fr;
+  grid-template-areas:
+    "iconFilled1 iconFilled2 iconFilled3"
+    "iconFilled4 iconFilled5 .";
+  gap: 20px;
+}
+
+#iconFilled1 {
+  grid-area: iconFilled1;
+  background-image: url("../images/court.png");
+
+}
+
+#iconFilled2 {
+  grid-area: iconFilled2;
+  background-image: url("../images/Bookshelf.png");
+
+}
+
+#iconFilled3 {
+  grid-area: iconFilled3;
+  background-image: url("../images/guitar.png");
+}
+
+#iconFilled4 {
+  grid-area: iconFilled4;
+  background-image: url("../images/train.png");
+}
+
+#iconFilled5 {
+  grid-area: iconFilled5;
+  background-image: url("../images/bus.png");
+}
